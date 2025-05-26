@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stok ve Fiyat Güncelle</title>
+</head>
+<body>
+    <h1>Stok ve Fiyat Güncelleme Sayfası</h1>
+    <form method="POST">
+        <input type="text" name="parca_no" placeholder="Parça Numarası" required>
+        <input type="number" name="stok_adet" placeholder="Yeni Stok Adedi" required>
+        <input type="number" step="0.01" name="fiyat" placeholder="Yeni Fiyat" required>
+        <button type="submit">Güncelle</button>
+    </form>
+    {% if mesaj %}
+        <p>{{ mesaj }}</p>
+    {% endif %}
+    <a href="/">Ana sayfaya dön</a>
+</body>
+</html>

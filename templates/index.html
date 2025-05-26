@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stok Sorgulama</title>
+</head>
+<body>
+    <h1>Parça Stok ve Fiyat Sorgulama</h1>
+    <form method="POST">
+        <input type="text" name="parca_no" placeholder="Parça Numarası">
+        <button type="submit">Sorgula</button>
+    </form>
+    <p><a href="/guncelle">Stok ve Fiyat Güncelle</a></p>
+
+    {% if stok is not none %}
+        <p>Stokta {{ stok[0] }} adet var.</p>
+        <p>Fiyat: {{ stok[1] }} ₺</p>
+    {% endif %}
+</body>
+</html>
